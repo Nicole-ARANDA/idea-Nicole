@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../estilosCss/Estilo.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <title>P. y G. Niños</title>
 </head>
 <body>
@@ -22,42 +23,47 @@
         </b>
     </header>
     <main>
-        <h2> FORMULARIO DE CONTACTO </h2> 
-        <form action="index.html" method="post">
-            <input type="text" name="nombre" placeholder="NOMBRE">
-            <br>
-            <br>
-            <input type="text" name="apellido" placeholder=" APELLIDO">
-            <br>
-            <br>
-            <input type="text" name="Provinica" placeholder="PROVINCIA">
-            <br>
-            <br>
-            <input type="email" name="E-MAIL" placeholder="nombre@ejemplo.com">
-            <br>
-            <br>
-            <input type="number" name=" Cod. de Area" placeholder="Cod. De Area">  <input type="number" name=" Telefono" placeholder=" TELEFONO">
-            <br>
-            <br>
-        <select>
-            <option value="Mayorista"> Mayorista </option>
-            <option value="Revendedora"> Revendedora </option>
-            <option value="Minorista"> Minorista </option>
-        </select>
-        <select>
-            <option value="Envios"> Envios </option>
-            <option value="Comisionista"> Comisionista </option>
-            <option value="Punto de Encuentro"> Punto de Encuentro </option>
-        </select>
-        <br>
-        <br>
-        <textarea cols="40" rows="15" placeholder=" CONSULTA O SOLICITAR PRESUPUESTO... " ></textarea>
-        <br>
-        <br>
-            <input type="submit" value="Enviar"/>
-            <input type="Reset" value="Limpiar"/>
-            <input type="button" Value= "Cancelar"/>
-    </form>
+        <div class="container">
+            <h2> FORMULARIO DE CONTACTO </h2> 
+            <form>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1"></label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1"></label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Apellido">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlInput1"></label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Provincia">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlInput1"></label>
+                  <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="E-mail ejemplo: name@example.com">
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlSelect1"></label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Mayorista</option>
+                    <option>Revendedora</option>
+                    <option>Minorista</option>
+                  </select>
+                  <br>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Envios</option>
+                    <option>Comisionista</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1"></label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Consulta o presupuesto..." rows="3"></textarea>
+                </div>
+                <button input type="submit" class="btn btn-danger" value="Enviar"> Enviar</button>
+                <button input type="reset" class="btn btn-danger" value="Limpiar"> Limpiar</button>
+                <button input type="button" class="btn btn-danger" value="Enviar"> Cancelar</button>
+            </form>
+        </div>
     </main>
     <footer>
         <div>

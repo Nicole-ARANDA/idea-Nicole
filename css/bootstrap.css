@@ -170,7 +170,7 @@ a {
 }
 
 a:hover {
-  color: white;
+  color: rgb(241, 71, 71);
   text-decoration: none;
   transform: scale(1.5);
 }
@@ -375,12 +375,11 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  font-size: 1.9rem;
   color: rgb(241, 71, 71);
 }
 
 h3, .h3 {
-  font-size: 1.75rem;
+  
 }
 
 h4, .h4 {
