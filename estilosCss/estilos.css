@@ -1,8 +1,23 @@
-body {
-  background-color: green;
-}
-
 h1 {
   color: black;
+}
+
+.Container-Index {
+  width: 100%;
+  margin: o auto;
+}
+
+aside {
+  float: left;
+  width: 25%;
+  height: 700px;
+  background-color: white;
+}
+
+section {
+  float: left;
+  width: 75%;
+  height: 500px;
+  background-color: blue;
 }
 /*# sourceMappingURL=estilos.css.map */
