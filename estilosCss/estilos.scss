@@ -1,41 +1,10 @@
-$colorbg: black;
+@import"Index.scss";
+@import"Contacto.scss";
+
+
 .Logo{
     float: left;
     width: 100%;
     height: 200px;
 }
 
-h1{
-    color: $colorbg;
-}
-.Container-Index{
-    width: 100%;
-    margin: o auto;
-}
-aside{
-    float: left;
-
-}
-section{
-    float: left;
-    width: 450px / 600px *100%;
-    height: 500px;
-}
-.container-Contacto{
-    width: 100%;
-    margin: o auto;
-    aside{
-        float: left;
-        width: 150px / 600px * 100%;
-        height: 500px;
-       img{
-           margin: 10px 10px 10px 10px
-       };
-    }
-    section{
-        float: left;
-        width: 350px / 600px *100%;
-        height: 500px;
-        margin-left: 200px;
-    }
-}
