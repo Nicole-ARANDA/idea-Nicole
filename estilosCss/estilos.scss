@@ -1,4 +1,9 @@
 $colorbg: black;
+.Logo{
+    float: left;
+    width: 100%;
+    height: 200px;
+}
 
 h1{
     color: $colorbg;
@@ -9,13 +14,28 @@ h1{
 }
 aside{
     float: left;
-    width: 150px / 600px * 100%;
-    height: 700px;
-    background-color: white;
+
 }
 section{
     float: left;
     width: 450px / 600px *100%;
     height: 500px;
-    background-color: blue;
+}
+.container-Contacto{
+    width: 100%;
+    margin: o auto;
+    aside{
+        float: left;
+        width: 150px / 600px * 100%;
+        height: 500px;
+       img{
+           margin: 10px 10px 10px 10px
+       };
+    }
+    section{
+        float: left;
+        width: 350px / 600px *100%;
+        height: 500px;
+        margin-left: 200px;
+    }
 }

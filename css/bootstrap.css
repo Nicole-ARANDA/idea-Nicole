@@ -375,12 +375,9 @@ h1, .h1 {
 }
 
 h2, .h2 {
-  color: rgb(241, 71, 71);
+  color: rgba(221, 29, 29, 0.932);
 }
 
-h3, .h3 {
-  
-}
 
 h4, .h4 {
   font-size: 1.3rem;
@@ -388,6 +385,7 @@ h4, .h4 {
 
 h5, .h5 {
   font-size: 1.25rem;
+  color: rgba(221, 29, 29, 0.932);
 }
 
 h6, .h6 {
