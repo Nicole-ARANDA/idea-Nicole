@@ -1,49 +1,307 @@
-.Logo {
+@charset "UTF-8";
+.grid-container {
+  display: -ms-grid;
+  display: grid;
   float: left;
+}
+
+.Compilado {
   width: 100%;
-  height: 200px;
+  margin: 40px 0 40px 0;
+  -ms-grid-columns: (25%)[4];
+      grid-template-columns: repeat(4, 25%);
+  -ms-grid-rows: (200px)[3];
+      grid-template-rows: repeat(3, 200px);
+  gap: 1px 1px;
+  text-align: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  font-size: 1.5rem;
+      grid-template-areas: "noticiaDos noticiaDos noticiaTres noticiaCuatro" "noticiaCinco noticiaSeis noticiaSiete noticiaCuatro";
 }
 
-h1 {
-  color: black;
+.noticiaTres {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: noticiaTres;
+  background-color: #73CAEF;
 }
 
-.Container-Index {
-  width: 100%;
-  margin: o auto;
+.noticiaDos {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: noticiaDos;
+  background-color: #89FFFB;
 }
 
-aside {
-  float: left;
-  width: 25%;
-  height: 700px;
+.noticiaCuatro {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  grid-area: noticiaCuatro;
+  background-color: #41E2DD;
 }
 
-section {
-  float: left;
-  width: 75%;
-  height: 500px;
+.noticiaCinco {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: noticiaCinco;
+  background-color: #50D8C8;
+}
+
+.noticiaSeis {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: noticiaSeis;
+  background-color: #53B4F4;
+}
+
+.noticiaSiete {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: noticiaSiete;
+  background-color: #CDE0E4;
 }
 
 .container-Contacto {
   width: 100%;
-  margin: o auto;
+  margin: 40px 0 40px 0;
+  text-align: center;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
 }
 
 .container-Contacto aside {
   float: left;
-  width: 25%;
+  width: 100%;
   height: 500px;
-}
-
-.container-Contacto aside img {
-  margin: 10px 10px 10px 10px;
 }
 
 .container-Contacto section {
   float: left;
   width: 58.33333%;
   height: 500px;
-  margin-left: 200px;
+  margin-left: 100px;
+  margin-bottom: 50px;
+}
+
+* {
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  background-position: center;
+  background: url(../Media/fondo.jpg);
+  position: relative;
+  margin-bottom: 120em;
+  min-height: 100vh;
+}
+
+header {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  width: 100%;
+  background-color: white;
+}
+
+.Logo {
+  width: 400px;
+  height: 100px;
+  font-size: 0;
+  color: transparent;
+  line-height: 0;
+  background: url(../Media/Logo2.jpeg) no-repeat center center;
+  background-size: auto 81%;
+}
+
+a h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 45px;
+  color: rgba(221, 29, 29, 0.932);
+}
+
+/* solo para el titulo del HEADER*/
+h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgba(221, 29, 29, 0.932);
+  font-weight: bold;
+  text-align: center;
+  padding: 40px;
+}
+
+h3 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  text-align: center;
+  color: #8d9190;
+  padding: 20px;
+}
+
+h4 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  color: black;
+  padding: 15px;
+  padding-left: 80px;
+  margin-bottom: 5px;
+}
+
+h5 {
+  width: auto;
+  margin: auto;
+  text-align: center;
+  font-size: 3px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding-bottom: 5px;
+  margin-bottom: 4px;
+}
+
+img {
+  padding: 0 95px 0 95px;
+}
+
+div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 15px;
+}
+
+div ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+form {
+  text-align: center;
+  position: center;
+}
+
+select {
+  margin-left: 35px;
+}
+
+p {
+  padding-bottom: 30px;
+  font-size: 15px;
+  margin: 30px;
+}
+
+video {
+  width: 300px;
+  height: 300px;
+  padding-left: 150px;
+}
+
+/* Solo Para los videos que se encuentran en promociones */
+.FOOTER {
+  font-size: 12px;
+  text-align: center;
+  color: rgba(221, 29, 29, 0.932);
+  background-color: white;
+  padding: 1em 0;
+  margin: 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.catalogo {
+  font-size: 18px;
+  color: #8d9190;
+  display: block;
+}
+
+/*Solo para para la seccion de CAtalogo */
+.catalogo li {
+  margin: 60px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.catalogo-dos {
+  font-size: 18px;
+  color: #8d9190;
+  display: block;
+}
+
+/* Para Niños, Niñas y Jeveniles*/
+.catalogo-dos li {
+  margin: 25px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenido-catalogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.Grid-Promo {
+  height: 500px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto auto auto auto;
+      grid-template-columns: auto auto auto auto auto auto;
+  -ms-grid-rows: 400px;
+      grid-template-rows: 400px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  grid-column-gap: 1px;
+}
+
+.Grid-Promo div {
+  -ms-grid-columns: 300 300 300;
+      grid-template-columns: 300 300 300;
+  text-align: center;
+  border: 1px rgba(221, 29, 29, 0.932);
+}
+
+.Grid-Catalogo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto 300px;
+      grid-template-columns: auto auto 300px;
+  -ms-grid-rows: 300px;
+      grid-template-rows: 300px;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  grid-column-gap: 5px;
+  text-align: center;
+}
+
+.Logo {
+  float: left;
+  width: 100%;
+  height: 200px;
 }
 /*# sourceMappingURL=estilos.css.map */
