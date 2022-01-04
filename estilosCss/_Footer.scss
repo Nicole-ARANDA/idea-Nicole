@@ -1,0 +1,17 @@
+.FOOTER{
+    width:100%;
+    text-align: center;
+    color:rgba(221, 29, 29, 0.932) ;
+    background-color: white ;
+    position: fixed;
+    bottom: 0;
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+        margin-bottom: 15px; 
+        li {
+        display: flex;  
+        flex-direction: row;    
+        }
+    }
+}
