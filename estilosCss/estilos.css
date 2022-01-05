@@ -214,8 +214,8 @@
 .Contenido-Seccion {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 5fr;
-      grid-template-columns: 1fr 5fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
 }
 
 .Contenido-Seccion > * {
@@ -306,6 +306,9 @@
 
 .informacion + * + {
   margin-bottom: -5em;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .Tipo-Envio {
@@ -319,7 +322,7 @@
   border-radius: 3px;
 }
 
-.Tipo-Envio, .Calificacion {
+.Tipo-Envio .Calificacion {
   font-size: 0.8em;
 }
 
@@ -328,15 +331,15 @@
 }
 
 .Precio-Envio {
-  color: rgb 0, 166, 80;
+  color: #00a650;
+}
+
+.Precio-Envio .Descripcion, .Precio-Envio .Ubicacion {
+  font-size: 0.9em;
 }
 
 .Descripcion, .Ubicacion {
   font-weight: 300;
-}
-
-.Precio-Envio, .Descripcion, .Ubicacion {
-  font-size: 0.9em;
 }
 
 .Calificacion {

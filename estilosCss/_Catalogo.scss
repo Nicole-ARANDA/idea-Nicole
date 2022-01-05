@@ -3,7 +3,7 @@
 }
 .Contenido-Seccion{
     display: grid;
-        grid-template-columns: 1fr 5fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         > * {
             padding: 2em;
         }
@@ -55,9 +55,9 @@
     flex-flow: column;
     + * + {
         margin-bottom: 0-5em;
+        justify-content: center;
     }
 }
-
 .Tipo-Envio{
     background-color: rgb(52,131,250);
     color: rgb(255, 255, 255);
@@ -65,38 +65,36 @@
     max-width: max-content;
     padding: 0 0.2em;
     border-radius: 3px;
+    .Calificacion {
+        font-size: 0.8em;
+    }
 }
-
-.Tipo-Envio, .Calificacion {
-    font-size: 0.8em;
-}
-
 .Precio{
-        font-size: 1.5em;
+    font-size: 1.5em;
 }
 .Precio-Envio{
-    color: rgb (0, 166, 80)
+    color: rgb(0, 166, 80);
+    .Descripcion, .Ubicacion{
+        font-size: 0.9em;
+    }
 }
 .Descripcion, .Ubicacion{
     font-weight: 300;
-}
-.Precio-Envio, .Descripcion, .Ubicacion{
-    font-size: 0.9em;
 }
 .Calificacion{
     color: rgb(52,131,250);
     display: flex;
     flex-flow: row nowrap;
     align-items: flex-end;
-
-}
-.Calificacion, .Ubicacion{
-    transition-duration: 0,3s;
-    transition-property: opacity;
-    opacity: 0;
-    >*{
-        margin: 0;
+    
     }
+.Calificacion, .Ubicacion{
+        transition-duration: 0,3s;
+        transition-property: opacity;
+        opacity: 0;
+        >*{
+            margin: 0;
+        }
 }
 .Producto :hover .Calificacion,
 .Producto :hover .Ubicacion{
