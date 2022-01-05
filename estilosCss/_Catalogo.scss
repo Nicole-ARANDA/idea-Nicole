@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+}
+.Contenido-Seccion{
+    display: grid;
+        grid-template-columns: 1fr 5fr;
+        > * {
+            padding: 2em;
+        }
+}
+.Catalogo-Menu{
+    padding: 1.5em;
+    font-weight: bold;
+    background-color: #fff;
+    h4,
+    ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        li {
+            justify-content: center;
+            padding: 1em;
+        }
+    }  
+}
+.Contenido-Producto{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 280px);
+    grid-template-rows: 1fr;
+    grid-gap: 1em;
+}
+.Producto{
+    min-width: 280px;
+    display: flex;
+    flex-flow: column;
+    border-radius: 6px;
+    box-shadow: 0 0 0.1em rgba(0, 0, 0, 0.2);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition-property: box-shadow;
+    transition-duration: 0.3s ;
+    :hover{
+        box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
+    }
+    img{
+        width: 100%;
+        object-fit: cover;
+    }
+}
+.informacion{
+    border-top: 1px solid rgb(230, 230,230);
+    padding: 1em;
+    display: flex;
+    flex-flow: column;
+    + * + {
+        margin-bottom: 0-5em;
+    }
+}
+
+.Tipo-Envio{
+    background-color: rgb(52,131,250);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    max-width: max-content;
+    padding: 0 0.2em;
+    border-radius: 3px;
+}
+
+.Tipo-Envio, .Calificacion {
+    font-size: 0.8em;
+}
+
+.Precio{
+        font-size: 1.5em;
+}
+.Precio-Envio{
+    color: rgb (0, 166, 80)
+}
+.Descripcion, .Ubicacion{
+    font-weight: 300;
+}
+.Precio-Envio, .Descripcion, .Ubicacion{
+    font-size: 0.9em;
+}
+.Calificacion{
+    color: rgb(52,131,250);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+
+}
+.Calificacion, .Ubicacion{
+    transition-duration: 0,3s;
+    transition-property: opacity;
+    opacity: 0;
+    >*{
+        margin: 0;
+    }
+}
+.Producto :hover .Calificacion,
+.Producto :hover .Ubicacion{
+    opacity: 1;
+}
