@@ -48,20 +48,19 @@
             width: 20%;
             justify-content: center;
             background: rgba(221, 29, 29, 0.932);
-            color: #000;
+            color: #fff;
             border: 0;
             padding: 1em;
-            :hover,
-            :focus {
-                background-color: rgba(222, 28, 28, 0.931);
-                color:#fff;
-                transition: background-color 1s ease-out;
-                outline: 0;
-            }     
         }   
     }  
 }
-
+.Contacto-Formulario form button:hover,
+button:focus {
+    background-color: rgba(222, 28, 28, 0.700);
+    color:#000;
+    transition: background-color 1s ease-out;
+    outline: 0;
+} 
 .Contacto-Info{
     background-color: #fff;
     h4,
@@ -84,7 +83,7 @@
 }
 //* PANTALLAS GRANDES*//
 @media (min-width: 700px){
-    body{
+    .Contenido-Formulario{
         padding: 0 4rem;
     }
     .Contacto-Grupo{
