@@ -13,7 +13,10 @@
         margin-bottom: 15px; 
         li {
         display: flex;  
-        flex-direction: row;    
+        flex-direction: row;  
+        i{
+            color: map-get($color, gris);
+        }  
         }
     }
 }
