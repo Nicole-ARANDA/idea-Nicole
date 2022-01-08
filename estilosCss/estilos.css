@@ -175,7 +175,7 @@ button:focus {
   outline: 0;
 }
 
-.FOOTER {
+.Footer {
   width: 100%;
   text-align: center;
   color: rgba(221, 29, 29, 0.932);
@@ -186,25 +186,17 @@ button:focus {
           box-shadow: 0 0 20px 0 rgba(221, 29, 29, 0.3);
 }
 
-.FOOTER ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  margin-top: 13px;
-  margin-bottom: 15px;
+.Footer p {
+  margin: 13px;
 }
 
-.FOOTER ul li {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+.Footer p i {
+  color: black;
+  font-size: 20px;
+  margin: 3px;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
 }
 
 * {
@@ -386,7 +378,7 @@ body {
   background-position: center;
   background: url(../Media/fondo.jpg);
   position: relative;
-  margin-bottom: 4em;
+  margin-bottom: 9em;
   min-height: 100vh;
 }
 
@@ -417,7 +409,6 @@ header {
 a h1 {
   font-weight: bold;
   text-align: center;
-  font-size: 45px;
   color: rgba(221, 29, 29, 0.932);
 }
 
@@ -425,14 +416,12 @@ a h1 {
 h2 {
   font-weight: bold;
   text-align: center;
-  font-size: 45px;
   color: rgba(221, 29, 29, 0.932);
   padding: 40px;
 }
 
 h5 {
   font-weight: bold;
-  font-size: 20px;
   text-align: center;
   color: rgba(221, 29, 29, 0.932);
   padding-bottom: 5px;
