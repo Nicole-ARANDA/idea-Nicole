@@ -1,4 +1,4 @@
-.FOOTER{
+.Footer{
     width:100%;
     text-align: center;
     color:rgba(221, 29, 29, 0.932) ;
@@ -6,17 +6,15 @@
     position: fixed;
     bottom: 0;
     box-shadow: 0 0 20px 0 rgba(221, 29, 29, .3);
-    ul{
-        display: flex;
-        justify-content: space-evenly;
-        margin-top: 13px;
-        margin-bottom: 15px; 
-        li {
-        display: flex;  
-        flex-direction: row;  
-        i{
-            color: map-get($color, gris);
-        }  
-        }
-    }
+   
+} 
+
+p{ 
+    margin-top: 13px;
+    margin-bottom: 15px;  
+    justify-content: space-evenly;         
+}
+
+i{
+    color: map-get($color, gris);
 }
