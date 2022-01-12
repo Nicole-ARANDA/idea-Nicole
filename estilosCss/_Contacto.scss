@@ -1,46 +1,49 @@
-.Contenido-Formulario{
-    .Titulo{
+.Contenido-Formulario {
+    .Titulo {
         text-align: center;
         font-size: 3em;
         margin-bottom: 0.5em;
     }
-    
-    .Contacto-Grupo{
+
+    .Contacto-Grupo {
         box-shadow: 0 0 20px 0 rgba(221, 29, 29, .3);
-        > *{
+
+        >* {
             padding: 1em;
         }
 
-        .Contacto-Formulario{
+        .Contacto-Formulario {
             margin-left: auto;
             margin-right: auto;
             padding: 1.5em;
             font-weight: bold;
+
             form {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
-                .Block{
+
+                .Block {
                     grid-column: 1 / 3;
                 }
-        
+
                 div {
                     margin: 0;
                     padding: 1em;
                 }
-        
+
                 input,
                 textarea,
-                button{
+                button {
                     width: 100%;
-                    margin-top: 2em;
                     padding: 1em;
-                    border:none;
+                    border: none;
                     background: none;
                     outline: 0;
                     color: black;
                     border-bottom: 1px solid rgba(221, 29, 29, 0.932);
                 }
-                button{
+
+                button {
                     width: 32%;
                     cursor: pointer;
                     justify-content: center;
@@ -48,35 +51,40 @@
                     color: #fff;
                     border: 0;
                     padding: 1em;
-                    &:hover, &:focus{
+
+                    &:hover,
+                    &:focus {
                         background-color: rgba(222, 28, 28, 0.700);
-                        color:#000;
+                        color: #000;
                         transition: background-color 1s ease-out;
                         outline: 0;
                     }
                 }
-            }  
+            }
         }
 
-        .Contacto-Info{
+        .Contacto-Info {
             background-color: #fff;
+
             h4,
             ul,
-            p{
+            p {
                 display: flex;
                 justify-content: center;
                 padding: 0;
             }
-            ul{
+
+            ul {
                 list-style: none;
                 display: flex;
                 flex-direction: column;
                 padding: 0;
+
                 li {
                     justify-content: center;
                     padding: 1em;
                 }
-            }    
+            }
         }
     }
 }

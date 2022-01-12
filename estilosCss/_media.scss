@@ -1,101 +1,160 @@
+@media only screen and (max-width: 768px) {
 
-
-
-@media only screen and (max-width: 768px){
     //SECCION CATALOGO
     .Contenido-Seccion {
         align-items: start;
         justify-content: space-around;
         padding-right: 1%;
-        display: grid; 
-        grid-template-columns: 22% 30% 30%; 
+        display: grid;
+        grid-template-columns: 22% 30% 30%;
         row-gap: 3%;
         margin-bottom: 8%;
-        grid-template-areas: 
-        "Catalogo-Menu Producto1 Producto2"
-        "Catalogo-Menu Producto3 Producto4"; 
+        grid-template-areas:
+            "Catalogo-Menu Producto1 Producto2"
+            "Catalogo-Menu Producto3 Producto4";
+
+        .Contenido-Producto1 {
+            @include productos (Producto1)
+        }
+
+        .Contenido-Producto2 {
+            @include productos (Producto2)
+        }
+
+        .Contenido-Producto3 {
+            @include productos (Producto3)
+        }
+
+        .Contenido-Producto4 {
+            @include productos (Producto4)
+        }
+
+        .Catalogo-Menu {
+            grid-area: Catalogo-Menu;
+        }
     }
+
     //SECCION FOOTER
     .footer {
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        .itemFooter{
+
+        .itemFooter {
             width: 25%;
         }
     }
+
     //SECCION CONTACTO
-    .Contacto-Formulario{
-        form{
-            display: flex;
-            flex-direction: column;
+    .Contenido-Formulario {
+        .Contacto-Grupo {
+            .Contacto-Formulario {
+                .form {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
         }
     }
 }
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 480px) {
+
     //SECCION CATALOGO
     .Contenido-Seccion {
         align-items: start;
         justify-content: space-around;
-        display: grid; 
-        grid-template-columns: 90%; 
+        display: grid;
+        grid-template-columns: 90%;
         row-gap: 1%;
         margin-bottom: 55%;
-        grid-template-areas: 
-        "Catalogo-Menu"
-        "Producto1"
-        "Producto2"
-        "Producto3"
-        "Producto4"; 
+        grid-template-areas:
+            "Catalogo-Menu"
+            "Producto1"
+            "Producto2"
+            "Producto3"
+            "Producto4";
+
+        .Contenido-Producto1 {
+            @include productos (Producto1)
+        }
+
+        .Contenido-Producto2 {
+            @include productos (Producto2)
+        }
+
+        .Contenido-Producto3 {
+            @include productos (Producto3)
+        }
+
+        .Contenido-Producto4 {
+            @include productos (Producto4)
+        }
+
+        .Catalogo-Menu {
+            grid-area: Catalogo-Menu;
+        }
     }
+
     //SECCION FOOTER
     .footer {
         flex-direction: column;
         gap: 15px;
-        .itemFooter{
+
+        .itemFooter {
             width: 87%;
         }
     }
+
     //SECCION PROMOCIONES
-    .promociones{
-        h1{
-            font-size:1.6rem;
+    .promociones {
+        h1 {
+            font-size: 1.6rem;
             margin: 5% 0;
         }
     }
+
     //SECCION QUIENES SOMOS
-    .quienesSomos{
-        margin-bottom:20%;
-        .h1{
-            font-size:2rem;
+    .quienesSomos {
+        margin-bottom: 20%;
+
+        .h1 {
+            font-size: 2rem;
             margin: 8% 0;
         }
-        .h2{
+
+        .h2 {
             padding: 1%;
             margin: 8% 0;
         }
-        .p{
-            padding:0 8%;
+
+        .p {
+            padding: 0 8%;
         }
     }
 }
-/*@media (min-width: 700px){
+
+@media (min-width: 700px) {
+
     //SECCION CONTACTOS
-    .Contenido-Formulario{
+    .Contenido-Formulario {
         padding: 0 4rem;
     }
-    .Contacto-Grupo{
+
+    .Contacto-Grupo {
         display: grid;
         grid-template-columns: 2fr 1fr;
-        > * {
+
+        >* {
             padding: 2em;
         }
     }
-    .Contacto-Info{
+
+    .Contacto-Info {
+
         h4,
         ul,
-        p{
+        p {
             padding: 1em;
             text-align: left;
         }

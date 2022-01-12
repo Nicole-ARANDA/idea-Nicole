@@ -1,21 +1,24 @@
-.menu{
+.menu {
     font-size: 1.1em;
     padding: 0.3em;
     color: yellow;
-    ul{
+
+    ul {
         display: flex;
         justify-content: space-evenly;
-        margin-bottom: 15px; 
+        margin-bottom: 15px;
+
         li {
-        display: flex;  
-        flex-direction: row;    
+            display: flex;
+            flex-direction: row;
         }
     }
+
     :hover,
-    :focus{
+    :focus {
         font-size: 0.99em;
         color: rgba(222, 28, 28, 0.931);
         transition: background-color 1s ease-out;
         outline: 0;
-    }    
+    }
 }
