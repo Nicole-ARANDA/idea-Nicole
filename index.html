@@ -6,14 +6,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!------SEO------->
-    <meta name="description"content="Fabricacion de Ropa de Niños, Niñas y Juvenil para la venta mayorista y 
-    minorista">
-    <meta name="keywords" content="inicio, niño, niña, ropa, camperas, musculosas, pijamas, babuchas, short,
-     remeras">
+    <meta name="description"
+        content="En Invitaciones Digitales realizamos Videos Invitación para
+    todo tipo de eventos para enviar por WhatsApp, Messenger, Telegram. Tambien tajetas de cumpleaños, san valentin, Flyer, Tripticos, logos y mucho mas.">
+    <meta name="keywords" content="inicio, niño, niña, ropa, camperas, musculosas, pijamas, babuchas, short, remeras">
     <!--ESTILOS BOOTSTRAP-->
     <link rel="stylesheet" href="css/bootstrap.css">
     <!--ESTILOS SASS-->
-    <link rel="stylesheet" href="estilosCss/estilos.css">
+    <link rel="stylesheet" href="css/estilos.css">
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,19 +22,21 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!--Enlace de Iconos-->
     <script src="https://kit.fontawesome.com/a7fc73f628.js" crossorigin="anonymous"></script>
-    <!--Mi titulo-->
-    <title>Venta de ropa de niños y juvenil para mayorista y minorista</title>
+    <title>P. y G. Niños - Inicio</title>
 </head>
 
 <body>
-    <header>
-        <a href="index.html">
-            <h1 class="Logo"></h1>
-        </a>
+    <!---------HEADER / LOGO/ MENÚ--------->
+    <header class="header">
+        <div class="headerLogo">
+            <a href="index.html"><img class="logo" src="media/Logo2.jpeg" alt="P. y G. Niños"></a>
+        </div>
+
         <a href="Paginas/Catalogo.html">
-            <h5><i class="fas fa-cart-arrow-down"></i> Tienda Online</h5>
+            <h5><i class="fas fa-store"></i> Tienda Online</h5>
         </a>
-        <div class="Menu">
+
+        <div class="menu">
             <ul>
                 <li> <a href="Paginas/Catalogo.html"> Catalogo </a></li>
                 <li> <a href="Paginas/Promociones.html"> Promociones </a> </li>
@@ -43,8 +45,10 @@
             </ul>
         </div>
     </header>
+
+    <!---------PRIMERA SECCION INDEX--------->
     <main>
-        <div class="Contenedor">
+        <div class="Container-Index">
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -54,15 +58,15 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <a href="paginas/Juvenil.html"> <img class="d-block w-100" src="Media/SeccionJuvenil3.jpeg"
-                                alt="First slide" height="450px"></a>
+                                alt="First slide" height="650px"></a>
                     </div>
                     <div class="carousel-item">
                         <a href="paginas/Ninios.html"><img class="d-block w-100" src="Media/VeranoNene.jpeg"
-                                alt="Second slide" height="450px"></a>
+                                alt="Second slide" height="650px"></a>
                     </div>
                     <div class="carousel-item">
                         <a href="paginas/Ninias.html"><img class="d-block w-100" src="Media/VeranoNena.jpeg"
-                                alt="Third slide" height="450px"></a>
+                                alt="Third slide" height="650px"></a>
                     </div>
                 </div>
                 <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -76,10 +80,33 @@
             </div>
         </div>
     </main>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!---------FOOTER--------->
     <footer>
-        <div class="Footer">
-            <p> Pequeños y Grandes Niños Venta Mayorista y Minorista </p>
-            <p> <i class="fab fa-facebook-f"></i> </i> <i class="fab fa-twitter"> <i class="fab fa-instagram-square"></i></i> </p>
+        <div class="footer">
+            <p class="itemFooter"> Pequeños y Grandes Niños / Venta Mayorista y Minorista </p>
+            <div class="itemFooter">
+                <p>Siguenos en nuestras redes sociales</p>
+                <div><i class="fab fa-facebook-f"></i> <i class="fab fa-instagram"></i> </div>
+                <p>Pequeños y Grandes Niños</p>
+            </div>
+            <div class=" itemFooter col-md-4 box">
+                <span class="copyright quick-links">Copyright &copy; Damiana Nicole Aranda - <script>
+                        document.write(new Date().getFullYear())
+                    </script> | Tel:
+                </span>
+            </div>
         </div>
     </footer>
     <script src="js/jquery-3.6.0.min.js"></script>

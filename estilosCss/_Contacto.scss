@@ -1,104 +1,82 @@
-*{
-    box-sizing: border-box;
-}
-
-.Titulo{
-    padding: 0 1.5em;
-    text-align: center;
-    font-size: 3em;
-    margin-bottom: 0.5em;
-}
-.Contacto-Grupo{
-    box-shadow: 0 0 20px 0 rgba(221, 29, 29, .3);
-    > *{
-        padding: 1em;
+.Contenido-Formulario{
+    .Titulo{
+        text-align: center;
+        font-size: 3em;
+        margin-bottom: 0.5em;
     }
-}
-.Contacto-Formulario{
-    max-width: 1170px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1.5em;
-    font-weight: bold;
-    form {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        .Block{
-            grid-column: 1 / 3;
-        }
-
-        p {
-            margin: 0;
-            padding: 1em;
-        }
-
-        input,
-        textarea,
-        button{
-            width: 100%;
-            margin-top: 2em;
-            padding: 1em;
-            border:none;
-            background: none;
-            outline: 0;
-            color: black;
-            border-bottom: 1px solid rgba(221, 29, 29, 0.932);
-        }
-        button{
-            width: 20%;
-            justify-content: center;
-            background: rgba(221, 29, 29, 0.932);
-            color: #fff;
-            border: 0;
-            padding: 1em;
-        }   
-    }  
-}
-.Contacto-Formulario form button:hover,
-button:focus {
-    background-color: rgba(222, 28, 28, 0.700);
-    color:#000;
-    transition: background-color 1s ease-out;
-    outline: 0;
-} 
-.Contacto-Info{
-    background-color: #fff;
-    h4,
-    ul,
-    p{
-        display: flex;
-        justify-content: center;
-        padding: 0;
-    }
-    ul{
-        list-style: none;
-        display: flex;
-        flex-direction: column;
-        padding: 0;
-        li {
-            justify-content: center;
-            padding: 1em;
-        }
-    }    
-}
-//* PANTALLAS GRANDES*//
-@media (min-width: 700px){
-    .Contenido-Formulario{
-        padding: 0 4rem;
-    }
+    
     .Contacto-Grupo{
-        display: grid;
-        grid-template-columns: 2fr 1fr;
-        > * {
-            padding: 2em;
-        }
-    }
-    .Contacto-Info{
-        h4,
-        ul,
-        p{
+        box-shadow: 0 0 20px 0 rgba(221, 29, 29, .3);
+        > *{
             padding: 1em;
-            text-align: left;
+        }
+
+        .Contacto-Formulario{
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1.5em;
+            font-weight: bold;
+            form {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                .Block{
+                    grid-column: 1 / 3;
+                }
+        
+                div {
+                    margin: 0;
+                    padding: 1em;
+                }
+        
+                input,
+                textarea,
+                button{
+                    width: 100%;
+                    margin-top: 2em;
+                    padding: 1em;
+                    border:none;
+                    background: none;
+                    outline: 0;
+                    color: black;
+                    border-bottom: 1px solid rgba(221, 29, 29, 0.932);
+                }
+                button{
+                    width: 32%;
+                    cursor: pointer;
+                    justify-content: center;
+                    background: rgba(221, 29, 29, 0.932);
+                    color: #fff;
+                    border: 0;
+                    padding: 1em;
+                    &:hover, &:focus{
+                        background-color: rgba(222, 28, 28, 0.700);
+                        color:#000;
+                        transition: background-color 1s ease-out;
+                        outline: 0;
+                    }
+                }
+            }  
+        }
+
+        .Contacto-Info{
+            background-color: #fff;
+            h4,
+            ul,
+            p{
+                display: flex;
+                justify-content: center;
+                padding: 0;
+            }
+            ul{
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                padding: 0;
+                li {
+                    justify-content: center;
+                    padding: 1em;
+                }
+            }    
         }
     }
 }

@@ -1,0 +1,22 @@
+.header{
+    text-decoration: none;
+    font-size: 18px;
+    color: black;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    .headerLogo{
+        .logo{
+            width: 55%;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 2%;
+        }
+    }
+    a{
+        color: #000;
+        font-size: 15px;
+        font-weight: bold;
+    }
+}

@@ -1,21 +1,35 @@
-.Footer{
-
-    width:100%;
+.footer {
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
     text-align: center;
-    color:rgba(221, 29, 29, 0.932) ;
-    background-color: white ;
-    position: fixed;
-    bottom: 0;
+    padding: 1% 0%;
+    color: #dd1d1dee;
+    background-color: white;
     box-shadow: 0 0 20px 0 rgba(221, 29, 29, .3);
-    p{
-       
-        margin: 3px;
-        i{
-            color: $color;
-            font-size: 20px;
-            margin: 3px;
-            justify-content: right;
+
+    .itemFooter {
+        width: 100%;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    p {
+        margin: 5px 0;
+    }
+
+    .fab {
+        font-size: 1.2rem;
+        padding: 10px;
+        width: 40px;
+        margin: 1%;
+        background-color: black;
+        border-radius: 50%;
+        &:hover{
+            background-color: #ffffff;
+            border: 1px solid #dd1d1dee;
         }
     }
-   
-} 
+}
