@@ -1,47 +1,48 @@
 @media only screen and (max-width: 768px) {
-
-    //SECCION CATALOGO
-    .Contenido-Seccion {
-        align-items: start;
-        justify-content: space-around;
-        padding-right: 1%;
-        display: grid;
-        grid-template-columns: 22% 30% 30%;
-        row-gap: 3%;
-        margin-bottom: 8%;
-        grid-template-areas:
-            "Catalogo-Menu Producto1 Producto2"
-            "Catalogo-Menu Producto3 Producto4";
-
-        .Contenido-Producto1 {
-            @include productos (Producto1)
+    //SECCION TARJETAS CATALOGO
+    .Contenedor{
+        h1{
+            margin: 2%;
+            font-size: 2.5rem;
         }
-
-        .Contenido-Producto2 {
-            @include productos (Producto2)
-        }
-
-        .Contenido-Producto3 {
-            @include productos (Producto3)
-        }
-
-        .Contenido-Producto4 {
-            @include productos (Producto4)
-        }
-
-        .Catalogo-Menu {
-            grid-area: Catalogo-Menu;
+        .contenidoTarjetas{
+            .Catalogo-Menu{
+                width: 20%;
+            }
+            .Contenido-Seccion{
+                padding: 1%;
+                height: 64vh;
+                .Contenido-Producto{
+                    width: 40%;
+                }
+            }
         }
     }
 
-    //SECCION FOOTER
-    .footer {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
+    //SECCION PROMOCIONES
+    .promociones{
+        .contenidoTarjetas{
+            flex-wrap: wrap;
+        }
+        .contenedorLotes{
+            h2{
+                text-align: center;
+            }
+        }
+        .lote{
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .videosRopa{
+            flex-wrap: wrap;
+        }
+        
+    }
 
-        .itemFooter {
-            width: 25%;
+    //SECCION CATALOGO
+    .catalogo{
+        .contenedorTarjetas{
+            flex-wrap: wrap;
         }
     }
 
@@ -56,54 +57,90 @@
             }
         }
     }
-}
-
-@media only screen and (max-width: 480px) {
-
-    //SECCION CATALOGO
-    .Contenido-Seccion {
-        align-items: start;
-        justify-content: space-around;
-        display: grid;
-        grid-template-columns: 90%;
-        row-gap: 1%;
-        margin-bottom: 55%;
-        grid-template-areas:
-            "Catalogo-Menu"
-            "Producto1"
-            "Producto2"
-            "Producto3"
-            "Producto4";
-
-        .Contenido-Producto1 {
-            @include productos (Producto1)
-        }
-
-        .Contenido-Producto2 {
-            @include productos (Producto2)
-        }
-
-        .Contenido-Producto3 {
-            @include productos (Producto3)
-        }
-
-        .Contenido-Producto4 {
-            @include productos (Producto4)
-        }
-
-        .Catalogo-Menu {
-            grid-area: Catalogo-Menu;
-        }
-    }
 
     //SECCION FOOTER
     .footer {
-        flex-direction: column;
-        gap: 15px;
-
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 0;
         .itemFooter {
-            width: 87%;
+            width: 25%;
         }
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    //SECCION TARJETAS CATALOGO
+    .Contenedor{
+        .contenidoTarjetas{
+            flex-direction: column;
+            .Catalogo-Menu{
+                width: 80%;
+                margin: 20px auto;
+                left: 0;
+            }
+            .Contenido-Seccion{
+                flex-direction: column;
+                flex-wrap: nowrap;
+                overflow: none;
+                height: auto;
+                .Contenido-Producto{
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    //SECCION INICIO
+    .inicio {
+        .Container-Index {
+            margin: 5%;
+    
+            .w-100 {
+                height: auto;
+            }
+        }
+    
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            gap: 13px 13px;
+            grid-auto-flow: row;
+            grid-template-areas:
+                "sección1"
+                "sección2"
+                "sección3"
+                "sección4"
+                "sección5";
+        }
+    
+        .sección1 {
+            grid-area: sección1;
+            .grillaInicio{
+                width: 100%;
+                border-radius: 15px;
+            }
+        }
+    
+        .sección2 {
+            grid-area: sección2;
+        }
+        
+        .sección3 {
+            grid-area: sección3;
+        }
+    
+        .sección4 {
+            grid-area: sección4;
+        }
+    
+    
+        .sección5 {
+            grid-area: sección5;
+        }
+    
     }
 
     //SECCION PROMOCIONES
@@ -132,10 +169,18 @@
             padding: 0 8%;
         }
     }
+
+    //SECCION FOOTER
+    .footer {
+        flex-direction: column;
+        gap: 15px;
+        .itemFooter {
+            width: 87%;
+        }
+    }
 }
 
 @media (min-width: 700px) {
-
     //SECCION CONTACTOS
     .Contenido-Formulario {
         padding: 0 4rem;

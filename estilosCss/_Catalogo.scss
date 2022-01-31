@@ -1,107 +1,45 @@
-//MIXING PRODUCTOS CATALOGO
-@mixin productos ($grid) {
-    grid-area: $grid;
-    flex-flow: column;
-    border-radius: 6px;
-    background-color: rgb(255, 255, 255);
-    transition-duration: 0.3s;
-    transition-property: box-shadow;
-
-    &:hover {
-        box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
+.catalogo{
+    display: flex;
+    flex-direction: column;
+    h1{
+        margin: 2%;
     }
-
-    cursor: pointer;
-
-    img {
-        width: 100%;
-        object-fit: cover;
-    }
-
-    .Informacion {
-        padding: 1%;
+    .contenedorTarjetas{
         display: flex;
-        gap: 6px;
-        flex-direction: column;
-        align-items: center;
-
-        Tipo-Envio {
-            padding: 2px 8px;
-            font-size: 1rem;
-            color: white;
-            background: rgb(52, 131, 250);
-            border-radius: 5px;
+        flex-direction: row;
+        justify-content: center;
+        a{
+            text-decoration: none;
         }
+        .tarjeta{
+            text-align: center;
+            &:hover{
+                transform: scale(1.05);
+                transition: ease-in-out 250ms;
+            }
+            img{
+                width: 80%;
+            }
 
-        .Precio {
-            font-size: 1.5rem;
-        }
-
-        .Precio-Envio {
-            color: green;
-        }
-
-        .Calificacion,
-        .Ubicacion {
-            opacity: 0;
-        }
-
-        &:hover {
-
-            .Calificacion,
-            .Ubicacion {
-                opacity: 1;
-                color: rgb(52, 131, 250);
+            h3{
+                font-size: 2rem;
+                color: #fff;
+                position: relative;
+                bottom: 52px;
+                background-color: rgba(69, 69, 70, 0.5);
+                width: 80%;
+                left: 10%;
+                padding: 2%;
+            }
+            .proximamente{
+                bottom: 87px;
             }
         }
     }
-}
-
-//CONTENIDO TARJETAS CATALOGO
-.Contenido-Seccion {
-    align-items: start;
-    justify-content: space-around;
-    padding-right: 1%;
-    display: grid;
-    grid-template-columns: 16% 19% 19% 19% 19%;
-    row-gap: 3%;
-    margin: 1%;
-    grid-template-areas: "Catalogo-Menu Producto1 Producto2 Producto3 Producto4";
-
-    .Contenido-Producto1 {
-        @include productos (Producto1)
-    }
-
-    .Contenido-Producto2 {
-        @include productos (Producto2)
-    }
-
-    .Contenido-Producto3 {
-        @include productos (Producto3)
-    }
-
-    .Contenido-Producto4 {
-        @include productos (Producto4)
-    }
-
-    .Catalogo-Menu {
-        grid-area: Catalogo-Menu;
-        padding: 20px;
-        font-weight: bold;
-        //margin-right: 1%;
-        background-color: #fff;
-
-        h4,
-        ul {
-            display: flex;
-            flex-direction: column;
-            list-style: none;
-            padding: 0;
-
-            li {
-                justify-content: center;
-                padding: 20px;
-            }
+    .Container-Index {
+        margin: 5%;
+        .w-100 {
+            height: auto;
         }
     }
 }

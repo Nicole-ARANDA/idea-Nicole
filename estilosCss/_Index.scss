@@ -1,7 +1,52 @@
-.Container-Index {
-    margin-bottom: 5%;
+.inicio {
+    .Container-Index {
+        margin: 5%;
 
-    .w-100 {
-        height: auto;
+        .w-100 {
+            height: auto;
+        }
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 13px 13px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "sección1 sección2 sección3"
+            "sección4 sección2 sección5";
+    }
+
+    .sección1 {
+        grid-area: sección1;
+        .grillaInicio{
+            width: 100%;
+            border-radius: 15px;
+        }
+    }
+
+    .sección2 {
+        grid-area: sección2;
+        @extend .sección1;
+        .grillaInicio{
+            height: 100%;
+        }
+    }
+    
+    .sección3 {
+        grid-area: sección3;
+        @extend .sección1;
+    }
+
+    .sección4 {
+        grid-area: sección4;
+        @extend .sección1;
+    }
+
+
+    .sección5 {
+        grid-area: sección5;
+        @extend .sección1;
     }
 }

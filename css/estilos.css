@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .header {
   text-decoration: none;
   font-size: 18px;
@@ -14,9 +15,9 @@
 }
 
 .header .headerLogo .logo {
-  width: 55%;
+  width: 30%;
   display: block;
-  margin: 0 auto;
+  margin: 1% auto;
   margin-bottom: 2%;
 }
 
@@ -26,18 +27,68 @@
   font-weight: bold;
 }
 
-.Container-Index {
-  margin-bottom: 5%;
+.inicio .Container-Index {
+  margin: 5%;
 }
 
-.Container-Index .w-100 {
+.inicio .Container-Index .w-100 {
   height: auto;
+}
+
+.inicio .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  gap: 13px 13px;
+  grid-auto-flow: row;
+      grid-template-areas: "sección1 sección2 sección3" "sección4 sección2 sección5";
+}
+
+.inicio .sección1, .inicio .sección2, .inicio .sección3, .inicio .sección4, .inicio .sección5 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: sección1;
+}
+
+.inicio .sección1 .grillaInicio, .inicio .sección2 .grillaInicio, .inicio .sección3 .grillaInicio, .inicio .sección4 .grillaInicio, .inicio .sección5 .grillaInicio {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.inicio .sección2 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  grid-area: sección2;
+}
+
+.inicio .sección2 .grillaInicio {
+  height: 100%;
+}
+
+.inicio .sección3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: sección3;
+}
+
+.inicio .sección4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sección4;
+}
+
+.inicio .sección5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: sección5;
 }
 
 .menu {
   font-size: 1.1em;
-  padding: 0.3em;
-  color: yellow;
 }
 
 .menu ul {
@@ -69,321 +120,7 @@
   outline: 0;
 }
 
-.Contenido-Seccion {
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding-right: 1%;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 16% 19% 19% 19% 19%;
-      grid-template-columns: 16% 19% 19% 19% 19%;
-  row-gap: 3%;
-  margin: 1%;
-      grid-template-areas: "Catalogo-Menu Producto1 Producto2 Producto3 Producto4";
-}
-
-.Contenido-Seccion .Contenido-Producto1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: Producto1;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  border-radius: 6px;
-  background-color: white;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-property: -webkit-box-shadow;
-  transition-property: -webkit-box-shadow;
-  transition-property: box-shadow;
-  transition-property: box-shadow, -webkit-box-shadow;
-  cursor: pointer;
-}
-
-.Contenido-Seccion .Contenido-Producto1:hover {
-  -webkit-box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-}
-
-.Contenido-Seccion .Contenido-Producto1 img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.Contenido-Seccion .Contenido-Producto1 .Informacion {
-  padding: 1%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 6px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.Contenido-Seccion .Contenido-Producto1 .Informacion Tipo-Envio {
-  padding: 2px 8px;
-  font-size: 1rem;
-  color: white;
-  background: #3483fa;
-  border-radius: 5px;
-}
-
-.Contenido-Seccion .Contenido-Producto1 .Informacion .Precio {
-  font-size: 1.5rem;
-}
-
-.Contenido-Seccion .Contenido-Producto1 .Informacion .Precio-Envio {
-  color: green;
-}
-
-.Contenido-Seccion .Contenido-Producto1 .Informacion .Calificacion,
-.Contenido-Seccion .Contenido-Producto1 .Informacion .Ubicacion {
-  opacity: 0;
-}
-
-.Contenido-Seccion .Contenido-Producto1 .Informacion:hover .Calificacion,
-.Contenido-Seccion .Contenido-Producto1 .Informacion:hover .Ubicacion {
-  opacity: 1;
-  color: #3483fa;
-}
-
-.Contenido-Seccion .Contenido-Producto2 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
-  grid-area: Producto2;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  border-radius: 6px;
-  background-color: white;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-property: -webkit-box-shadow;
-  transition-property: -webkit-box-shadow;
-  transition-property: box-shadow;
-  transition-property: box-shadow, -webkit-box-shadow;
-  cursor: pointer;
-}
-
-.Contenido-Seccion .Contenido-Producto2:hover {
-  -webkit-box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-}
-
-.Contenido-Seccion .Contenido-Producto2 img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.Contenido-Seccion .Contenido-Producto2 .Informacion {
-  padding: 1%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 6px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.Contenido-Seccion .Contenido-Producto2 .Informacion Tipo-Envio {
-  padding: 2px 8px;
-  font-size: 1rem;
-  color: white;
-  background: #3483fa;
-  border-radius: 5px;
-}
-
-.Contenido-Seccion .Contenido-Producto2 .Informacion .Precio {
-  font-size: 1.5rem;
-}
-
-.Contenido-Seccion .Contenido-Producto2 .Informacion .Precio-Envio {
-  color: green;
-}
-
-.Contenido-Seccion .Contenido-Producto2 .Informacion .Calificacion,
-.Contenido-Seccion .Contenido-Producto2 .Informacion .Ubicacion {
-  opacity: 0;
-}
-
-.Contenido-Seccion .Contenido-Producto2 .Informacion:hover .Calificacion,
-.Contenido-Seccion .Contenido-Producto2 .Informacion:hover .Ubicacion {
-  opacity: 1;
-  color: #3483fa;
-}
-
-.Contenido-Seccion .Contenido-Producto3 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 4;
-  grid-area: Producto3;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  border-radius: 6px;
-  background-color: white;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-property: -webkit-box-shadow;
-  transition-property: -webkit-box-shadow;
-  transition-property: box-shadow;
-  transition-property: box-shadow, -webkit-box-shadow;
-  cursor: pointer;
-}
-
-.Contenido-Seccion .Contenido-Producto3:hover {
-  -webkit-box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-}
-
-.Contenido-Seccion .Contenido-Producto3 img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.Contenido-Seccion .Contenido-Producto3 .Informacion {
-  padding: 1%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 6px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.Contenido-Seccion .Contenido-Producto3 .Informacion Tipo-Envio {
-  padding: 2px 8px;
-  font-size: 1rem;
-  color: white;
-  background: #3483fa;
-  border-radius: 5px;
-}
-
-.Contenido-Seccion .Contenido-Producto3 .Informacion .Precio {
-  font-size: 1.5rem;
-}
-
-.Contenido-Seccion .Contenido-Producto3 .Informacion .Precio-Envio {
-  color: green;
-}
-
-.Contenido-Seccion .Contenido-Producto3 .Informacion .Calificacion,
-.Contenido-Seccion .Contenido-Producto3 .Informacion .Ubicacion {
-  opacity: 0;
-}
-
-.Contenido-Seccion .Contenido-Producto3 .Informacion:hover .Calificacion,
-.Contenido-Seccion .Contenido-Producto3 .Informacion:hover .Ubicacion {
-  opacity: 1;
-  color: #3483fa;
-}
-
-.Contenido-Seccion .Contenido-Producto4 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 5;
-  grid-area: Producto4;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  border-radius: 6px;
-  background-color: white;
-  -webkit-transition-duration: 0.3s;
-          transition-duration: 0.3s;
-  -webkit-transition-property: -webkit-box-shadow;
-  transition-property: -webkit-box-shadow;
-  transition-property: box-shadow;
-  transition-property: box-shadow, -webkit-box-shadow;
-  cursor: pointer;
-}
-
-.Contenido-Seccion .Contenido-Producto4:hover {
-  -webkit-box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-          box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-}
-
-.Contenido-Seccion .Contenido-Producto4 img {
-  width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.Contenido-Seccion .Contenido-Producto4 .Informacion {
-  padding: 1%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 6px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.Contenido-Seccion .Contenido-Producto4 .Informacion Tipo-Envio {
-  padding: 2px 8px;
-  font-size: 1rem;
-  color: white;
-  background: #3483fa;
-  border-radius: 5px;
-}
-
-.Contenido-Seccion .Contenido-Producto4 .Informacion .Precio {
-  font-size: 1.5rem;
-}
-
-.Contenido-Seccion .Contenido-Producto4 .Informacion .Precio-Envio {
-  color: green;
-}
-
-.Contenido-Seccion .Contenido-Producto4 .Informacion .Calificacion,
-.Contenido-Seccion .Contenido-Producto4 .Informacion .Ubicacion {
-  opacity: 0;
-}
-
-.Contenido-Seccion .Contenido-Producto4 .Informacion:hover .Calificacion,
-.Contenido-Seccion .Contenido-Producto4 .Informacion:hover .Ubicacion {
-  opacity: 1;
-  color: #3483fa;
-}
-
-.Contenido-Seccion .Catalogo-Menu {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: Catalogo-Menu;
-  padding: 20px;
-  font-weight: bold;
-  background-color: #fff;
-}
-
-.Contenido-Seccion .Catalogo-Menu h4,
-.Contenido-Seccion .Catalogo-Menu ul {
+.catalogo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -391,16 +128,65 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  list-style: none;
-  padding: 0;
 }
 
-.Contenido-Seccion .Catalogo-Menu h4 li,
-.Contenido-Seccion .Catalogo-Menu ul li {
+.catalogo h1 {
+  margin: 2%;
+}
+
+.catalogo .contenedorTarjetas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 20px;
+}
+
+.catalogo .contenedorTarjetas a {
+  text-decoration: none;
+}
+
+.catalogo .contenedorTarjetas .tarjeta {
+  text-align: center;
+}
+
+.catalogo .contenedorTarjetas .tarjeta:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: ease-in-out 250ms;
+  transition: ease-in-out 250ms;
+}
+
+.catalogo .contenedorTarjetas .tarjeta img {
+  width: 80%;
+}
+
+.catalogo .contenedorTarjetas .tarjeta h3 {
+  font-size: 2rem;
+  color: #fff;
+  position: relative;
+  bottom: 52px;
+  background-color: rgba(69, 69, 70, 0.5);
+  width: 80%;
+  left: 10%;
+  padding: 2%;
+}
+
+.catalogo .contenedorTarjetas .tarjeta .proximamente {
+  bottom: 87px;
+}
+
+.catalogo .Container-Index {
+  margin: 5%;
+}
+
+.catalogo .Container-Index .w-100 {
+  height: auto;
 }
 
 .promociones {
@@ -411,27 +197,103 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .promociones h1 {
-  font-size: 3.2rem;
-  margin-top: 2%;
+  margin: 2%;
 }
 
-.promociones h2 {
-  font-size: 2.3rem;
+.promociones .contenidoTarjetas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.promociones h3 {
+.promociones .contenidoTarjetas .tarjeta {
+  text-align: center;
+}
+
+.promociones .contenidoTarjetas .tarjeta:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: ease-in-out 250ms;
+  transition: ease-in-out 250ms;
+}
+
+.promociones .contenidoTarjetas .tarjeta img {
+  width: 80%;
+}
+
+.promociones .contenidoTarjetas .tarjeta h3 {
+  font-size: 2rem;
+  color: rgba(221, 29, 29, 0.932);
+  position: relative;
+  bottom: 57px;
+  background-color: aliceblue;
+  width: 78%;
+  left: 11%;
+  padding: 2%;
+}
+
+.promociones .contenedorLotes, .promociones .contenedorVideos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.promociones .contenedorLotes h2, .promociones .contenedorVideos h2 {
+  text-align: left;
   font-size: 2rem;
 }
 
-.promociones video {
-  width: 25%;
-  margin: 2%;
+.promociones .contenedorLotes .lote, .promociones .contenedorVideos .lote, .promociones .contenedorVideos .videosRopa {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.promociones .contenedorLotes .lote .tarjeta, .promociones .contenedorVideos .lote .tarjeta, .promociones .contenedorVideos .videosRopa .tarjeta {
+  text-align: center;
+}
+
+.promociones .contenedorLotes .lote .tarjeta:hover, .promociones .contenedorVideos .lote .tarjeta:hover, .promociones .contenedorVideos .videosRopa .tarjeta:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: ease-in-out 250ms;
+  transition: ease-in-out 250ms;
+}
+
+.promociones .contenedorLotes .lote .tarjeta img, .promociones .contenedorVideos .lote .tarjeta img, .promociones .contenedorVideos .videosRopa .tarjeta img {
+  width: 80%;
+}
+
+.promociones .contenedorLotes .lote .tarjeta h3, .promociones .contenedorVideos .lote .tarjeta h3, .promociones .contenedorVideos .videosRopa .tarjeta h3 {
+  font-size: 2rem;
+  color: rgba(221, 29, 29, 0.932);
+  position: relative;
+  bottom: 57px;
+  background-color: aliceblue;
+  width: 78%;
+  left: 11%;
+  padding: 2%;
 }
 
 .quienesSomos h1 {
@@ -445,6 +307,154 @@
 
 .quienesSomos p {
   padding: 0 4%;
+}
+
+.Contenedor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Contenedor .contenidoTarjetas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.Contenedor .contenidoTarjetas .Catalogo-Menu {
+  width: 16%;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  left: 2%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 20px;
+  font-weight: bold;
+  background-color: #fff;
+}
+
+.Contenedor .contenidoTarjetas .Catalogo-Menu .fas {
+  display: inline-block;
+}
+
+.Contenedor .contenidoTarjetas .Catalogo-Menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  list-style: none;
+  padding: 0;
+}
+
+.Contenedor .contenidoTarjetas .Catalogo-Menu ul li {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+}
+
+.Contenedor .contenidoTarjetas .Contenido-Seccion {
+  width: 100%;
+  height: 60vh;
+  overflow: scroll;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 3em;
+}
+
+.Contenedor .contenidoTarjetas .Contenido-Seccion .Contenido-Producto {
+  width: 26%;
+  border-radius: 6px;
+  background-color: white;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  cursor: pointer;
+}
+
+.Contenedor .contenidoTarjetas .Contenido-Seccion .Contenido-Producto:hover {
+  -webkit-box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
+}
+
+.Contenedor .contenidoTarjetas .Contenido-Seccion .Contenido-Producto img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.Contenedor .contenidoTarjetas .Contenido-Seccion .Contenido-Producto .Informacion {
+  padding: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 6px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Contenedor .contenidoTarjetas .Contenido-Seccion .Contenido-Producto .Informacion .Tipo-Envio {
+  padding: 2px 8px;
+  font-size: 1rem;
+  color: white;
+  background: #3483fa;
+  border-radius: 5px;
+}
+
+.Contenedor .contenidoTarjetas .Contenido-Seccion .Contenido-Producto .Informacion .Precio {
+  font-size: 1.5rem;
+}
+
+.Contenedor .contenidoTarjetas .Contenido-Seccion .Contenido-Producto .Informacion .Precio-Envio {
+  color: green;
+}
+
+.Contenedor .contenidoTarjetas .Contenido-Seccion .Contenido-Producto .Informacion .Calificacion,
+.Contenedor .contenidoTarjetas .Contenido-Seccion .Contenido-Producto .Informacion .Ubicacion {
+  opacity: 0;
+}
+
+.Contenedor .contenidoTarjetas .Contenido-Seccion .Contenido-Producto .Informacion:hover .Calificacion,
+.Contenedor .contenidoTarjetas .Contenido-Seccion .Contenido-Producto .Informacion:hover .Ubicacion {
+  opacity: 1;
+  color: #3483fa;
 }
 
 .Contenido-Formulario .Titulo {
@@ -595,278 +605,50 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .Contenido-Seccion {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    padding-right: 1%;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 22% 30% 30%;
-        grid-template-columns: 22% 30% 30%;
-    row-gap: 3%;
-    margin-bottom: 8%;
-        grid-template-areas: "Catalogo-Menu Producto1 Producto2" "Catalogo-Menu Producto3 Producto4";
+  .Contenedor h1 {
+    margin: 2%;
+    font-size: 2.5rem;
   }
-  .Contenido-Seccion .Contenido-Producto1 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: Producto1;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    border-radius: 6px;
-    background-color: white;
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-    -webkit-transition-property: -webkit-box-shadow;
-    transition-property: -webkit-box-shadow;
-    transition-property: box-shadow;
-    transition-property: box-shadow, -webkit-box-shadow;
-    cursor: pointer;
+  .Contenedor .contenidoTarjetas .Catalogo-Menu {
+    width: 20%;
   }
-  .Contenido-Seccion .Contenido-Producto1:hover {
-    -webkit-box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-  }
-  .Contenido-Seccion .Contenido-Producto1 img {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .Contenido-Seccion .Contenido-Producto1 .Informacion {
+  .Contenedor .contenidoTarjetas .Contenido-Seccion {
     padding: 1%;
+    height: 64vh;
+  }
+  .Contenedor .contenidoTarjetas .Contenido-Seccion .Contenido-Producto {
+    width: 40%;
+  }
+  .promociones .contenidoTarjetas {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .promociones .contenedorLotes h2, .promociones .contenedorVideos h2 {
+    text-align: center;
+  }
+  .promociones .lote, .promociones .contenedorVideos .videosRopa {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .promociones .videosRopa {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .catalogo .contenedorTarjetas {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .Contenido-Formulario .Contacto-Grupo .Contacto-Formulario .form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    gap: 6px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .Contenido-Seccion .Contenido-Producto1 .Informacion Tipo-Envio {
-    padding: 2px 8px;
-    font-size: 1rem;
-    color: white;
-    background: #3483fa;
-    border-radius: 5px;
-  }
-  .Contenido-Seccion .Contenido-Producto1 .Informacion .Precio {
-    font-size: 1.5rem;
-  }
-  .Contenido-Seccion .Contenido-Producto1 .Informacion .Precio-Envio {
-    color: green;
-  }
-  .Contenido-Seccion .Contenido-Producto1 .Informacion .Calificacion,
-  .Contenido-Seccion .Contenido-Producto1 .Informacion .Ubicacion {
-    opacity: 0;
-  }
-  .Contenido-Seccion .Contenido-Producto1 .Informacion:hover .Calificacion,
-  .Contenido-Seccion .Contenido-Producto1 .Informacion:hover .Ubicacion {
-    opacity: 1;
-    color: #3483fa;
-  }
-  .Contenido-Seccion .Contenido-Producto2 {
-    -ms-grid-row: 1;
-    -ms-grid-column: 3;
-    grid-area: Producto2;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    border-radius: 6px;
-    background-color: white;
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-    -webkit-transition-property: -webkit-box-shadow;
-    transition-property: -webkit-box-shadow;
-    transition-property: box-shadow;
-    transition-property: box-shadow, -webkit-box-shadow;
-    cursor: pointer;
-  }
-  .Contenido-Seccion .Contenido-Producto2:hover {
-    -webkit-box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-  }
-  .Contenido-Seccion .Contenido-Producto2 img {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .Contenido-Seccion .Contenido-Producto2 .Informacion {
-    padding: 1%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 6px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .Contenido-Seccion .Contenido-Producto2 .Informacion Tipo-Envio {
-    padding: 2px 8px;
-    font-size: 1rem;
-    color: white;
-    background: #3483fa;
-    border-radius: 5px;
-  }
-  .Contenido-Seccion .Contenido-Producto2 .Informacion .Precio {
-    font-size: 1.5rem;
-  }
-  .Contenido-Seccion .Contenido-Producto2 .Informacion .Precio-Envio {
-    color: green;
-  }
-  .Contenido-Seccion .Contenido-Producto2 .Informacion .Calificacion,
-  .Contenido-Seccion .Contenido-Producto2 .Informacion .Ubicacion {
-    opacity: 0;
-  }
-  .Contenido-Seccion .Contenido-Producto2 .Informacion:hover .Calificacion,
-  .Contenido-Seccion .Contenido-Producto2 .Informacion:hover .Ubicacion {
-    opacity: 1;
-    color: #3483fa;
-  }
-  .Contenido-Seccion .Contenido-Producto3 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 2;
-    grid-area: Producto3;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    border-radius: 6px;
-    background-color: white;
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-    -webkit-transition-property: -webkit-box-shadow;
-    transition-property: -webkit-box-shadow;
-    transition-property: box-shadow;
-    transition-property: box-shadow, -webkit-box-shadow;
-    cursor: pointer;
-  }
-  .Contenido-Seccion .Contenido-Producto3:hover {
-    -webkit-box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-  }
-  .Contenido-Seccion .Contenido-Producto3 img {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .Contenido-Seccion .Contenido-Producto3 .Informacion {
-    padding: 1%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 6px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .Contenido-Seccion .Contenido-Producto3 .Informacion Tipo-Envio {
-    padding: 2px 8px;
-    font-size: 1rem;
-    color: white;
-    background: #3483fa;
-    border-radius: 5px;
-  }
-  .Contenido-Seccion .Contenido-Producto3 .Informacion .Precio {
-    font-size: 1.5rem;
-  }
-  .Contenido-Seccion .Contenido-Producto3 .Informacion .Precio-Envio {
-    color: green;
-  }
-  .Contenido-Seccion .Contenido-Producto3 .Informacion .Calificacion,
-  .Contenido-Seccion .Contenido-Producto3 .Informacion .Ubicacion {
-    opacity: 0;
-  }
-  .Contenido-Seccion .Contenido-Producto3 .Informacion:hover .Calificacion,
-  .Contenido-Seccion .Contenido-Producto3 .Informacion:hover .Ubicacion {
-    opacity: 1;
-    color: #3483fa;
-  }
-  .Contenido-Seccion .Contenido-Producto4 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 3;
-    grid-area: Producto4;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    border-radius: 6px;
-    background-color: white;
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-    -webkit-transition-property: -webkit-box-shadow;
-    transition-property: -webkit-box-shadow;
-    transition-property: box-shadow;
-    transition-property: box-shadow, -webkit-box-shadow;
-    cursor: pointer;
-  }
-  .Contenido-Seccion .Contenido-Producto4:hover {
-    -webkit-box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-  }
-  .Contenido-Seccion .Contenido-Producto4 img {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .Contenido-Seccion .Contenido-Producto4 .Informacion {
-    padding: 1%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 6px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .Contenido-Seccion .Contenido-Producto4 .Informacion Tipo-Envio {
-    padding: 2px 8px;
-    font-size: 1rem;
-    color: white;
-    background: #3483fa;
-    border-radius: 5px;
-  }
-  .Contenido-Seccion .Contenido-Producto4 .Informacion .Precio {
-    font-size: 1.5rem;
-  }
-  .Contenido-Seccion .Contenido-Producto4 .Informacion .Precio-Envio {
-    color: green;
-  }
-  .Contenido-Seccion .Contenido-Producto4 .Informacion .Calificacion,
-  .Contenido-Seccion .Contenido-Producto4 .Informacion .Ubicacion {
-    opacity: 0;
-  }
-  .Contenido-Seccion .Contenido-Producto4 .Informacion:hover .Calificacion,
-  .Contenido-Seccion .Contenido-Producto4 .Informacion:hover .Ubicacion {
-    opacity: 1;
-    color: #3483fa;
-  }
-  .Contenido-Seccion .Catalogo-Menu {
-    -ms-grid-row: 1;
-    -ms-grid-row-span: 2;
-    -ms-grid-column: 1;
-    grid-area: Catalogo-Menu;
   }
   .footer {
     -webkit-box-orient: horizontal;
@@ -878,302 +660,84 @@
             align-items: center;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    margin-top: 0;
   }
   .footer .itemFooter {
     width: 25%;
   }
-  .Contenido-Formulario .Contacto-Grupo .Contacto-Formulario .form {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
 }
 
 @media only screen and (max-width: 480px) {
-  .Contenido-Seccion {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+  .Contenedor .contenidoTarjetas {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .Contenedor .contenidoTarjetas .Catalogo-Menu {
+    width: 80%;
+    margin: 20px auto;
+    left: 0;
+  }
+  .Contenedor .contenidoTarjetas .Contenido-Seccion {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    overflow: none;
+    height: auto;
+  }
+  .Contenedor .contenidoTarjetas .Contenido-Seccion .Contenido-Producto {
+    width: 80%;
+    margin: 0 auto;
+  }
+  .inicio .Container-Index {
+    margin: 5%;
+  }
+  .inicio .Container-Index .w-100 {
+    height: auto;
+  }
+  .inicio .container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 90%;
-        grid-template-columns: 90%;
-    row-gap: 1%;
-    margin-bottom: 55%;
-        grid-template-areas: "Catalogo-Menu" "Producto1" "Producto2" "Producto3" "Producto4";
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr;
+        grid-template-rows: 1fr;
+    gap: 13px 13px;
+    grid-auto-flow: row;
+        grid-template-areas: "sección1" "sección2" "sección3" "sección4" "sección5";
   }
-  .Contenido-Seccion .Contenido-Producto1 {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    grid-area: Producto1;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    border-radius: 6px;
-    background-color: white;
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-    -webkit-transition-property: -webkit-box-shadow;
-    transition-property: -webkit-box-shadow;
-    transition-property: box-shadow;
-    transition-property: box-shadow, -webkit-box-shadow;
-    cursor: pointer;
-  }
-  .Contenido-Seccion .Contenido-Producto1:hover {
-    -webkit-box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-  }
-  .Contenido-Seccion .Contenido-Producto1 img {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .Contenido-Seccion .Contenido-Producto1 .Informacion {
-    padding: 1%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 6px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .Contenido-Seccion .Contenido-Producto1 .Informacion Tipo-Envio {
-    padding: 2px 8px;
-    font-size: 1rem;
-    color: white;
-    background: #3483fa;
-    border-radius: 5px;
-  }
-  .Contenido-Seccion .Contenido-Producto1 .Informacion .Precio {
-    font-size: 1.5rem;
-  }
-  .Contenido-Seccion .Contenido-Producto1 .Informacion .Precio-Envio {
-    color: green;
-  }
-  .Contenido-Seccion .Contenido-Producto1 .Informacion .Calificacion,
-  .Contenido-Seccion .Contenido-Producto1 .Informacion .Ubicacion {
-    opacity: 0;
-  }
-  .Contenido-Seccion .Contenido-Producto1 .Informacion:hover .Calificacion,
-  .Contenido-Seccion .Contenido-Producto1 .Informacion:hover .Ubicacion {
-    opacity: 1;
-    color: #3483fa;
-  }
-  .Contenido-Seccion .Contenido-Producto2 {
-    -ms-grid-row: 3;
-    -ms-grid-column: 1;
-    grid-area: Producto2;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    border-radius: 6px;
-    background-color: white;
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-    -webkit-transition-property: -webkit-box-shadow;
-    transition-property: -webkit-box-shadow;
-    transition-property: box-shadow;
-    transition-property: box-shadow, -webkit-box-shadow;
-    cursor: pointer;
-  }
-  .Contenido-Seccion .Contenido-Producto2:hover {
-    -webkit-box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-  }
-  .Contenido-Seccion .Contenido-Producto2 img {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .Contenido-Seccion .Contenido-Producto2 .Informacion {
-    padding: 1%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 6px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .Contenido-Seccion .Contenido-Producto2 .Informacion Tipo-Envio {
-    padding: 2px 8px;
-    font-size: 1rem;
-    color: white;
-    background: #3483fa;
-    border-radius: 5px;
-  }
-  .Contenido-Seccion .Contenido-Producto2 .Informacion .Precio {
-    font-size: 1.5rem;
-  }
-  .Contenido-Seccion .Contenido-Producto2 .Informacion .Precio-Envio {
-    color: green;
-  }
-  .Contenido-Seccion .Contenido-Producto2 .Informacion .Calificacion,
-  .Contenido-Seccion .Contenido-Producto2 .Informacion .Ubicacion {
-    opacity: 0;
-  }
-  .Contenido-Seccion .Contenido-Producto2 .Informacion:hover .Calificacion,
-  .Contenido-Seccion .Contenido-Producto2 .Informacion:hover .Ubicacion {
-    opacity: 1;
-    color: #3483fa;
-  }
-  .Contenido-Seccion .Contenido-Producto3 {
-    -ms-grid-row: 4;
-    -ms-grid-column: 1;
-    grid-area: Producto3;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    border-radius: 6px;
-    background-color: white;
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-    -webkit-transition-property: -webkit-box-shadow;
-    transition-property: -webkit-box-shadow;
-    transition-property: box-shadow;
-    transition-property: box-shadow, -webkit-box-shadow;
-    cursor: pointer;
-  }
-  .Contenido-Seccion .Contenido-Producto3:hover {
-    -webkit-box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-  }
-  .Contenido-Seccion .Contenido-Producto3 img {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .Contenido-Seccion .Contenido-Producto3 .Informacion {
-    padding: 1%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 6px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .Contenido-Seccion .Contenido-Producto3 .Informacion Tipo-Envio {
-    padding: 2px 8px;
-    font-size: 1rem;
-    color: white;
-    background: #3483fa;
-    border-radius: 5px;
-  }
-  .Contenido-Seccion .Contenido-Producto3 .Informacion .Precio {
-    font-size: 1.5rem;
-  }
-  .Contenido-Seccion .Contenido-Producto3 .Informacion .Precio-Envio {
-    color: green;
-  }
-  .Contenido-Seccion .Contenido-Producto3 .Informacion .Calificacion,
-  .Contenido-Seccion .Contenido-Producto3 .Informacion .Ubicacion {
-    opacity: 0;
-  }
-  .Contenido-Seccion .Contenido-Producto3 .Informacion:hover .Calificacion,
-  .Contenido-Seccion .Contenido-Producto3 .Informacion:hover .Ubicacion {
-    opacity: 1;
-    color: #3483fa;
-  }
-  .Contenido-Seccion .Contenido-Producto4 {
-    -ms-grid-row: 5;
-    -ms-grid-column: 1;
-    grid-area: Producto4;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-    border-radius: 6px;
-    background-color: white;
-    -webkit-transition-duration: 0.3s;
-            transition-duration: 0.3s;
-    -webkit-transition-property: -webkit-box-shadow;
-    transition-property: -webkit-box-shadow;
-    transition-property: box-shadow;
-    transition-property: box-shadow, -webkit-box-shadow;
-    cursor: pointer;
-  }
-  .Contenido-Seccion .Contenido-Producto4:hover {
-    -webkit-box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-            box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
-  }
-  .Contenido-Seccion .Contenido-Producto4 img {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
-  .Contenido-Seccion .Contenido-Producto4 .Informacion {
-    padding: 1%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    gap: 6px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .Contenido-Seccion .Contenido-Producto4 .Informacion Tipo-Envio {
-    padding: 2px 8px;
-    font-size: 1rem;
-    color: white;
-    background: #3483fa;
-    border-radius: 5px;
-  }
-  .Contenido-Seccion .Contenido-Producto4 .Informacion .Precio {
-    font-size: 1.5rem;
-  }
-  .Contenido-Seccion .Contenido-Producto4 .Informacion .Precio-Envio {
-    color: green;
-  }
-  .Contenido-Seccion .Contenido-Producto4 .Informacion .Calificacion,
-  .Contenido-Seccion .Contenido-Producto4 .Informacion .Ubicacion {
-    opacity: 0;
-  }
-  .Contenido-Seccion .Contenido-Producto4 .Informacion:hover .Calificacion,
-  .Contenido-Seccion .Contenido-Producto4 .Informacion:hover .Ubicacion {
-    opacity: 1;
-    color: #3483fa;
-  }
-  .Contenido-Seccion .Catalogo-Menu {
+  .inicio .sección1, .inicio .sección2, .inicio .sección3, .inicio .sección4, .inicio .sección5 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
-    grid-area: Catalogo-Menu;
+    grid-area: sección1;
   }
-  .footer {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 15px;
+  .inicio .sección1 .grillaInicio, .inicio .sección2 .grillaInicio, .inicio .sección3 .grillaInicio, .inicio .sección4 .grillaInicio, .inicio .sección5 .grillaInicio {
+    width: 100%;
+    border-radius: 15px;
   }
-  .footer .itemFooter {
-    width: 87%;
+  .inicio .sección2 {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: sección2;
+  }
+  .inicio .sección3 {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: sección3;
+  }
+  .inicio .sección4 {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: sección4;
+  }
+  .inicio .sección5 {
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: sección5;
   }
   .promociones h1 {
     font-size: 1.6rem;
@@ -1192,6 +756,16 @@
   }
   .quienesSomos .p {
     padding: 0 8%;
+  }
+  .footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 15px;
+  }
+  .footer .itemFooter {
+    width: 87%;
   }
 }
 
@@ -1242,7 +816,7 @@ body h1 {
 
 body h2 {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: rgba(221, 29, 29, 0.932);
+  color: #dd1d1dee;
   font-weight: bold;
   text-align: center;
   padding: 40px;
@@ -1256,5 +830,36 @@ body h5 {
   font-size: 20px;
   padding-bottom: 5px;
   margin-bottom: 4px;
+}
+
+body .whatsApp {
+  width: 200px;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 85%;
+  display: inline-block;
+  bottom: 15px;
+  color: #000000;
+  z-index: 1;
+  font-weight: bold;
+  background-color: #fff;
+  border-radius: 196px 196px 0px 196px;
+  padding: 8px;
+  letter-spacing: 0.1rem;
+  border: 1px solid #000;
+}
+
+body .whatsApp .fas {
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #dd1d1dee;
+  font-size: 20px;
+  margin-right: 6%;
+}
+
+body .whatsApp .fa-user {
+  color: #fff;
 }
 /*# sourceMappingURL=estilos.css.map */

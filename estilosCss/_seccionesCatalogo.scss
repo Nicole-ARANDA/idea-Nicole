@@ -1,0 +1,97 @@
+//SECCIO TARJETAS CATALOGO
+.Contenedor{
+    display: flex;
+    flex-direction: column;
+    .contenidoTarjetas{
+        display: flex;
+        flex-direction: row;
+        .Catalogo-Menu{
+            width: 16%;
+            min-height: 100%;
+            display: flex;
+            position: relative;
+            left: 2%;
+            flex-direction: column;
+            padding: 20px;
+            font-weight: bold;
+            background-color: #fff;
+            .fas{
+                display: inline-block;
+            }
+            ul{
+                display: flex;
+                flex-direction: column;
+                list-style: none;
+                padding: 0;
+                
+                li {
+                    justify-content: center;
+                    padding: 20px;
+                }
+            }
+        }
+        .Contenido-Seccion {
+            width: 100%;
+            height: 60vh;
+            overflow: scroll;
+            align-items: start;
+            justify-content: space-evenly;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 3em;
+            .Contenido-Producto {
+                width: 26%;
+                border-radius: 6px;
+                background-color: rgb(255, 255, 255);
+                transition-duration: 0.3s;
+                transition-property: box-shadow;            
+                cursor: pointer;
+                &:hover {
+                    box-shadow: 0 0 1.5em rgba(0, 0, 0, 0.2);
+                }
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            
+                .Informacion {
+                    padding: 1%;
+                    display: flex;
+                    gap: 6px;
+                    flex-direction: column;
+                    align-items: center;
+            
+                    .Tipo-Envio {
+                        padding: 2px 8px;
+                        font-size: 1rem;
+                        color: white;
+                        background: rgb(52, 131, 250);
+                        border-radius: 5px;
+                    }
+            
+                    .Precio {
+                        font-size: 1.5rem;
+                    }
+            
+                    .Precio-Envio {
+                        color: green;
+                    }
+            
+                    .Calificacion,
+                    .Ubicacion {
+                        opacity: 0;
+                    }
+            
+                    &:hover {
+                        .Calificacion,
+                        .Ubicacion {
+                            opacity: 1;
+                            color: rgb(52, 131, 250);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

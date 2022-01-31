@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!------SEO------->
-     <meta name="Catalogo de niño, niña y jueniles "
-     content="Catalogo, ropa de niño, niña, Juvenil, talles, 2, 4, 6, 8, 10, 12, 14">
-    <!--Estilos SASS-->
-    <link rel="stylesheet" href="../css/estilos.css">
+    <!------SEO------->
+    <meta name="Catalogo de niño, niña y juveniles "
+        content="Catalogo, ropa de niño, niña, Juvenil, talles, 2, 4, 6, 8, 10, 12, 14">
+    <!--ESTILOS BOOTSTRAP-->
+    <link rel="stylesheet" href="../css/bootstrap.css">
     <!--GOOGLE FONTS-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +18,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <!--Enlace de Iconos-->
     <script src="https://kit.fontawesome.com/a7fc73f628.js" crossorigin="anonymous"></script>
+    <!--Estilos SASS-->
+    <link rel="stylesheet" href="../css/estilos.css">
     <title>P. y G. Niños - Catalogo</title>
 </head>
 
@@ -42,55 +44,71 @@
 
     <!---------PRIMERA SECCION CATALOGO--------->
     <main class="catalogo">
-        <div class="Contenedor">
-            <h1> Ropa para toda la Familia </h1>
-                <div class="Contenido-Seccion">
-                    <div class="Contenido-Producto1">
-                        <div class="Producto1">
-                            <img src="../Media/cuadro-vacio.png" alt="Campera">
-                            <div class="Informacion">
-                                <div class="Calificacion">
-                                    <span> CATALOGO NIÑO </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="Contenido-Producto2">
-                        <div class="Producto2">
-                            <img src="../Media/cuadro-vacio.png" alt="Campera">
-                            <div class="Informacion">
-                                <div class="Calificacion">
-                                    <span> CATALOGO NIÑA</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
-                    <div class="Contenido-Producto3">
-                        <div class="Producto3">
-                            <img src="../Media/cuadro-vacio.png" alt="Campera">
-                            <div class="Informacion">
-                                <div class="Calificacion">
-                                    <span> CATALOGO JUVENIL </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="Contenido-Producto4">
-                        <div class="Producto3">
-                            <img src="../Media/cuadro-vacio.png" alt="Campera">
-                            <div class="Informacion">
-                                <div class="Calificacion">
-                                    <span> CATALOGO BEBE, PROXIMAMENTE </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-        
+        <h1> Productos </h1>
+        <!---------CATALOGO--------->
+        <div class="contenedorTarjetas">
+            <a href="#">
+                <div class="tarjeta">
+                    <img src="../Media/Bebe.jpg" alt="Campera">
+                    <h3 class="proximamente">Bebé</h3>
                 </div>
+            </a>
+
+            <a href="Ninios.html">
+                <div class="tarjeta">
+                    <img src="../Media/niño.jpg" alt="Campera">
+                    <h3>Niño</h3>
+                </div>
+            </a>
+
+            <a href="Ninias.html">
+                <div class="tarjeta">
+                    <img src="../Media/niña.jpg" alt="Campera">
+                    <h3>Niña</h3>
+                </div>
+            </a>
+
+            <a href="Juvenil.html">
+                <div class="tarjeta">
+                    <img src="../Media/Juvenil.jpg" alt="Campera">
+                    <h3>Juvenil</h3>
+                </div>
+            </a>
         </div>
+
+        <!--SEGUNADA SECCION CATALOGO - CARRUSEL-->
+        <div class="Container-Index">
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <a href="paginas/Juvenil.html"> <img class="d-block w-100" src="../Media/3x2Promociones.gif"
+                                alt="First slide" height="650px"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="paginas/Ninios.html"><img class="d-block w-100" src="../Media/EnvioGratis.jpeg"
+                                alt="Second slide" height="650px"></a>
+                    </div>
+                    <div class="carousel-item">
+                        <a href="paginas/Ninias.html"><img class="d-block w-100" src="../Media/EnvioGratis1.jpeg"
+                                alt="Third slide" height="650px"></a>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
     </main>
 
 
@@ -110,7 +128,7 @@
 
 
 
-
+    <a class="whatsApp" href="https://wa.me/5491134327965" target="_blank"><i class="fas fa-user"></i>Consultanos</a>
     <!---------FOOTER--------->
     <footer>
         <div class="footer">
@@ -128,6 +146,8 @@
             </div>
         </div>
     </footer>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
 </body>
 
 </html>
