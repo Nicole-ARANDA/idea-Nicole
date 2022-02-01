@@ -29,6 +29,8 @@
 
 .inicio .Container-Index {
   margin: 5%;
+  -webkit-box-shadow: 0px 10px 24px -11px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 10px 24px -11px rgba(0, 0, 0, 0.75);
 }
 
 .inicio .Container-Index .w-100 {
@@ -36,25 +38,31 @@
 }
 
 .inicio .container {
+  width: 100%;
+  margin: 3% auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-  gap: 13px 13px;
+  gap: 15px 12px;
   grid-auto-flow: row;
-      grid-template-areas: "sección1 sección2 sección3" "sección4 sección2 sección5";
+      grid-template-areas: "sección1 sección2 sección2 sección3" "sección4 sección2 sección2 sección5";
 }
 
-.inicio .sección1, .inicio .sección2, .inicio .sección3, .inicio .sección4, .inicio .sección5 {
+.inicio .sección1, .inicio .sección3, .inicio .sección4, .inicio .sección5 {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: sección1;
+  -webkit-box-shadow: 0px 10px 24px -11px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 10px 24px -11px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
 }
 
-.inicio .sección1 .grillaInicio, .inicio .sección2 .grillaInicio, .inicio .sección3 .grillaInicio, .inicio .sección4 .grillaInicio, .inicio .sección5 .grillaInicio {
+.inicio .sección1 .grillaInicio, .inicio .sección3 .grillaInicio, .inicio .sección4 .grillaInicio, .inicio .sección5 .grillaInicio {
   width: 100%;
+  height: 100%;
   border-radius: 15px;
 }
 
@@ -62,16 +70,22 @@
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
   grid-area: sección2;
+  -webkit-box-shadow: 0px 10px 24px -11px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 10px 24px -11px rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
 }
 
 .inicio .sección2 .grillaInicio {
+  width: 100%;
   height: 100%;
+  border-radius: 15px;
 }
 
 .inicio .sección3 {
   -ms-grid-row: 1;
-  -ms-grid-column: 3;
+  -ms-grid-column: 4;
   grid-area: sección3;
 }
 
@@ -83,7 +97,7 @@
 
 .inicio .sección5 {
   -ms-grid-row: 2;
-  -ms-grid-column: 3;
+  -ms-grid-column: 4;
   grid-area: sección5;
 }
 
@@ -232,11 +246,11 @@
 }
 
 .promociones .contenidoTarjetas .tarjeta h3 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: rgba(221, 29, 29, 0.932);
   position: relative;
   bottom: 57px;
-  background-color: aliceblue;
+  background-color: rgba(69, 69, 70, 0.5);
   width: 78%;
   left: 11%;
   padding: 2%;
@@ -253,6 +267,9 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .promociones .contenedorLotes h2, .promociones .contenedorVideos h2 {
@@ -283,17 +300,6 @@
 
 .promociones .contenedorLotes .lote .tarjeta img, .promociones .contenedorVideos .lote .tarjeta img, .promociones .contenedorVideos .videosRopa .tarjeta img {
   width: 80%;
-}
-
-.promociones .contenedorLotes .lote .tarjeta h3, .promociones .contenedorVideos .lote .tarjeta h3, .promociones .contenedorVideos .videosRopa .tarjeta h3 {
-  font-size: 2rem;
-  color: rgba(221, 29, 29, 0.932);
-  position: relative;
-  bottom: 57px;
-  background-color: aliceblue;
-  width: 78%;
-  left: 11%;
-  padding: 2%;
 }
 
 .quienesSomos h1 {
@@ -708,14 +714,14 @@
         grid-template-rows: 1fr;
     gap: 13px 13px;
     grid-auto-flow: row;
-        grid-template-areas: "sección1" "sección2" "sección3" "sección4" "sección5";
+        grid-template-areas: "sección1" "sección2" "sección3" "sección4" "sección5";
   }
-  .inicio .sección1, .inicio .sección2, .inicio .sección3, .inicio .sección4, .inicio .sección5 {
+  .inicio .sección1, .inicio .sección3, .inicio .sección4, .inicio .sección5 {
     -ms-grid-row: 1;
     -ms-grid-column: 1;
     grid-area: sección1;
   }
-  .inicio .sección1 .grillaInicio, .inicio .sección2 .grillaInicio, .inicio .sección3 .grillaInicio, .inicio .sección4 .grillaInicio, .inicio .sección5 .grillaInicio {
+  .inicio .sección1 .grillaInicio, .inicio .sección3 .grillaInicio, .inicio .sección4 .grillaInicio, .inicio .sección5 .grillaInicio {
     width: 100%;
     border-radius: 15px;
   }
